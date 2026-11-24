@@ -1,0 +1,10 @@
+{
+  "modid": "NahidaMod",
+  "name": "NahidaMod",
+  "author_list": ["NahidaLover"],
+  "description": "纳西妲模组。",
+  "version": "0.0.1",
+  "sts_version": "12-18-2022",
+  "mts_version": "3.30.3",
+  "dependencies": ["basemod"]
+}

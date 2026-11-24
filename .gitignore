@@ -1,0 +1,8 @@
+target/
+.idea/
+*.iml
+*.log
+sendToDevs/
+*.meta
+*.mat
+*.asset

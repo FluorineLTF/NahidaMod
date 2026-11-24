@@ -1,0 +1,62 @@
+{
+  "NahidaMod:WiseLordAction": {
+    "TEXT": [
+      "替换（智慧主形态）",
+      "替换"
+    ]
+  },
+    "NahidaMod:ActedAction": {
+      "TEXT": [
+        "激化",
+        "我 #r没有 可以被激化的卡牌！"
+      ]
+    },
+  "NahidaMod:NahidaCard": {
+    "TEXT": [
+      " NL  nahidamod:失活 ",
+      " 我不能打出带有 #r失活 的卡牌！",
+      " 。"
+    ]
+  },
+  "NahidaMod:TheNobleWitnessAction": {
+    "TEXT": [
+      "使其耗能为0。"
+    ]
+  },
+  "NahidaMod:LeavesReturnToRootAction": {
+    "TEXT": [
+      "选择一张牌。这张牌在本场战斗中消耗，并且将这张牌永久地移出你的卡组。",
+      "我的弃牌堆 #r没有 可以被移出卡组的牌！"
+    ]
+  },
+  "NahidaMod:ReturnCardToDrawPileAction": {
+    "TEXT": [
+      "选择",
+      "张牌。这些牌将返回你的抽牌堆。",
+      "将其返回抽牌堆。"
+    ]
+  },
+  "NahidaMod:JinnAction": {
+    "TEXT": [
+      "我的抽牌堆有1张卡被 #r失活 了......",
+      "我的抽牌堆有2张卡被 #r失活 了......",
+      "我的抽牌堆没有可以失活的卡牌！"
+    ]
+  },
+  "NahidaMod:WhiteWoodAction": {
+    "TEXT": [
+      "本场战斗中我还未打出牌！",
+      "我的手牌满了！"
+    ]
+  },
+  "NahidaMod:UnCalmMessage": {
+    "TEXT": [
+      "我的手牌中有 #r攻击牌 ！"
+    ]
+  },
+  "NahidaMod:BeyondKleshaAction": {
+    "TEXT": [
+      "我的抽牌堆是 #r空的 ！"
+    ]
+  }
+}

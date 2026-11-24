@@ -1,0 +1,241 @@
+package nahidamod.modcore;
+
+import basemod.BaseMod;
+import basemod.helpers.RelicType;
+import basemod.interfaces.*;
+import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.*;
+import nahidamod.Characters.MyCharacter;
+import com.badlogic.gdx.graphics.Color;
+import nahidamod.card.Basic.Defend;
+import nahidamod.card.Basic.Reverie;
+import nahidamod.card.Basic.Strike;
+import nahidamod.card.Common.*;
+import nahidamod.card.Common.NoRespect;
+import nahidamod.card.Rare.*;
+import nahidamod.card.Special.*;
+import nahidamod.card.Basic.ForbiddenKnowledge;
+import nahidamod.card.Uncommon.*;
+import nahidamod.card.Wish.Memory;
+import nahidamod.card.Wish.Surprise;
+import nahidamod.card.Wish.Sweet;
+import nahidamod.potions.WisdomPotion;
+import nahidamod.relics.*;
+
+import java.nio.charset.StandardCharsets;
+
+import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
+import static nahidamod.Characters.MyCharacter.Enums.MY_CHARACTER;
+
+@SpireInitializer
+public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber ,PostInitializeSubscriber{
+    @Override
+    public void receiveEditCharacters() {
+        // 向basemod注册人物
+        BaseMod.addCharacter(new MyCharacter(CardCrawlGame.playerName), MY_CHARACTER_BUTTON, MY_CHARACTER_PORTRAIT, MY_CHARACTER);
+    }
+
+    private static final String MY_CHARACTER_BUTTON = "NahidaResources/images/char/Character_Button.png";
+    // 人物选择界面的立绘
+    private static final String MY_CHARACTER_PORTRAIT = "NahidaResources/images/char/Nahida.png";
+    // 攻击牌的背景（小尺寸）
+    private static final String BG_ATTACK_512 = "NahidaResources/images/512/bg_attack_512.png";
+    // 能力牌的背景（小尺寸）
+    private static final String BG_POWER_512 = "NahidaResources/images/512/bg_power_512.png";
+    // 技能牌的背景（小尺寸）
+    private static final String BG_SKILL_512 = "NahidaResources/images/512/bg_skill_512.png";
+    // 在卡牌和遗物描述中的能量图标
+    private static final String SMALL_ORB = "NahidaResources/images/char/small_orb.png";
+    // 攻击牌的背景（大尺寸）
+    private static final String BG_ATTACK_1024 = "NahidaResources/images/1024/bg_attack.png";
+    // 能力牌的背景（大尺寸）
+    private static final String BG_POWER_1024 = "NahidaResources/images/1024/bg_power.png";
+    // 技能牌的背景（大尺寸）
+    private static final String BG_SKILL_1024 = "NahidaResources/images/1024/bg_skill.png";
+    // 在卡牌预览界面的能量图标
+    private static final String BIG_ORB = "NahidaResources/images/char/card_orb.png";
+    // 小尺寸的能量图标（战斗中，牌堆预览）
+    private static final String ENEYGY_ORB = "NahidaResources/images/char/cost_orb.png";
+    public static final Color MY_COLOR = new Color(1.0f, 1.0f, 1.0f, 1.0F);
+
+    public NahidaMod() {
+        BaseMod.subscribe(this);
+        BaseMod.addColor(EXAMPLE_CARD, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, BG_ATTACK_512, BG_SKILL_512, BG_POWER_512, ENEYGY_ORB, BG_ATTACK_1024, BG_SKILL_1024, BG_POWER_1024, BIG_ORB, SMALL_ORB);
+    }
+
+
+    public static void initialize() {
+        new NahidaMod();
+    }
+
+    @Override
+    public void receiveEditCards() {
+        BaseMod.addCard(new Strike());
+        BaseMod.addCard(new Defend());
+        BaseMod.addCard(new WiseLordForm());
+        BaseMod.addCard(new BreakCycle());
+        BaseMod.addCard(new RemainYourMora());
+        BaseMod.addCard(new SeeThrough());
+        BaseMod.addCard(new LongAlliance());
+        BaseMod.addCard(new FlashLight());
+        BaseMod.addCard(new PaintedDome());
+        BaseMod.addCard(new PerusingScripture());
+        BaseMod.addCard(new CannedKnowledge());
+        BaseMod.addCard(new SurasthanaFantasia());
+        BaseMod.addCard(new VagrantWandering());
+        BaseMod.addCard(new Paranoia());
+        BaseMod.addCard(new UnyieldingWitness());
+        BaseMod.addCard(new FakeSky());
+        BaseMod.addCard(new BeyondKlesha());
+        BaseMod.addCard(new ForbiddenKnowledge());
+        BaseMod.addCard(new JustPunishment());
+        BaseMod.addCard(new E());
+        BaseMod.addCard(new Kusava());
+        BaseMod.addCard(new UndisturbedSlumber());
+        BaseMod.addCard(new MelodyOfRebirth());
+        BaseMod.addCard(new RitualDuel());
+        BaseMod.addCard(new Reverie());
+        BaseMod.addCard(new Fragrance());
+        BaseMod.addCard(new EvergreenWish());
+        BaseMod.addCard(new SomeoneCallMyName());
+        BaseMod.addCard(new AgnihotraSutra());
+        BaseMod.addCard(new TheNobleWitness());
+        BaseMod.addCard(new VitalCandle());
+        BaseMod.addCard(new Die());
+        BaseMod.addCard(new Wish());
+        BaseMod.addCard(new Sweet());
+        BaseMod.addCard(new Memory());
+        BaseMod.addCard(new Surprise());
+        BaseMod.addCard(new LeavesReturnToRoot());
+        BaseMod.addCard(new Ormos());
+        BaseMod.addCard(new LeavesAndPetals());
+        BaseMod.addCard(new VimanaAgam());
+        BaseMod.addCard(new VarunaGatha());
+        BaseMod.addCard(new Cycle());
+        BaseMod.addCard(new TouringLight());
+        BaseMod.addCard(new EndlessCycle());
+        BaseMod.addCard(new MazeWanderer());
+        BaseMod.addCard(new LostSong());
+        BaseMod.addCard(new ForeverFlowing());
+        //BaseMod.addCard(new WhiteWoodMemory());
+        BaseMod.addCard(new CutOffEvilKarma());
+        //BaseMod.addCard(new WhispersLinger());
+        BaseMod.addCard(new WorldForgetMe());
+        BaseMod.addCard(new AntiSilent());
+        BaseMod.addCard(new Imagination());
+        BaseMod.addCard(new CalmlyRespond());
+        BaseMod.addCard(new PaleFire());
+        BaseMod.addCard(new WeavingDreams());
+        BaseMod.addCard(new ThinkingInCrises());
+        BaseMod.addCard(new SmilesAndTears());
+        BaseMod.addCard(new Manifestation());
+        BaseMod.addCard(new InitialWish());
+        BaseMod.addCard(new NeverForget());
+        BaseMod.addCard(new DawnOfWisdom());
+        BaseMod.addCard(new GracefulContemplation());
+        BaseMod.addCard(new MindfulTreasure());
+        BaseMod.addCard(new DustyMemories());
+        BaseMod.addCard(new HeronGuard());
+        BaseMod.addCard(new RapidMetabolism());
+        //BaseMod.addCard(new Insight());
+        BaseMod.addCard(new SanctuaryOfExiles());
+        BaseMod.addCard(new BorderSandBarrier());
+        BaseMod.addCard(new UnfulfilledDream());
+//        BaseMod.addCard(new WhisperInWood());
+        BaseMod.addCard(new SelfExploitation());
+        BaseMod.addCard(new SongOfThousandNight());
+        BaseMod.addCard(new WhirlingFoliage());
+        BaseMod.addCard(new NoRespect());
+        BaseMod.addCard(new GuiltByAssociation());
+//        BaseMod.addCard(new ConsciousnessDetach());
+        BaseMod.addCard(new AkashaPulses());
+        BaseMod.addCard(new EscalatingRage());
+//        BaseMod.addCard(new WisdomSharpen());
+        BaseMod.addCard(new A());
+        BaseMod.addCard(new Q());
+        BaseMod.addCard(new JoltsInForest());
+        BaseMod.addCard(new WallOfSamiel());
+        BaseMod.addCard(new DefectByThorn());
+        BaseMod.addCard(new CriticalHit());
+
+
+//        new AutoAdd("NahidaMod").packageFilter(SurasthanaFantasia.class).setDefaultSeen(true).cards();
+    }
+
+//    private void autoAddCard (Class c){
+//
+//        URL location;
+//        try {
+//            location = c.getProtectionDomain().getCodeSource().getLocation();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return;
+//        }
+//
+//        File file;
+//        try {
+//            file = new File(location.toURI());
+//        }catch (Exception e){
+//            e.printStackTrace();
+//            return;
+//        }
+//
+//        try (JarFile jarFile = new JarFile(file)){
+//            Enumeration<JarEntry> entries = jarFile.entries();
+//            while(entries.hasMoreElements()){
+//                JarEntry entry = entries.nextElement();
+//
+//            }
+//
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//
+//    }
+
+    @Override
+    public void receiveEditKeywords() {
+        Gson gson = new Gson();
+
+        String json = Gdx.files.internal("NahidaResources/localization/ZHS/keywords.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                // 这个id要全小写
+                BaseMod.addKeyword("nahidamod", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+    }
+
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelic(new BlossomingWhiteBranch(), RelicType.SHARED);
+        BaseMod.addRelic(new Jinn(), RelicType.SHARED);
+        BaseMod.addRelic(new TestRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new ApotheosisOfLuminescence(), RelicType.SHARED);
+        BaseMod.addRelic(new Heart(), RelicType.SHARED);
+    }
+
+    public void receiveEditStrings() {//本地化位置，目前只有中文
+        BaseMod.loadCustomStringsFile(CardStrings.class, "NahidaResources/localization/ZHS/cards.json"); // 加载相应语言的卡牌本地化内容。
+        BaseMod.loadCustomStringsFile(CharacterStrings.class, "NahidaResources/localization/ZHS/characters.json");
+        BaseMod.loadCustomStringsFile(RelicStrings.class, "NahidaResources/localization/ZHS/relics.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, "NahidaResources/localization/ZHS/powers.json");
+        BaseMod.loadCustomStringsFile(UIStrings.class, "NahidaResources/localization/ZHS/ui.json");
+        BaseMod.loadCustomStringsFile(PotionStrings.class, "NahidaResources/localization/ZHS/potions.json");
+    }
+
+
+    @Override
+    public void receivePostInitialize() {
+        addPotion();
+    }
+
+    public void addPotion () {
+        BaseMod.addPotion(WisdomPotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, "NahidaMod:WisdomPotion", MY_CHARACTER);//参数没有搞明白
+    }
+}

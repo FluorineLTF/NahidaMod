@@ -1,0 +1,37 @@
+{
+  "NahidaMod:BlossomingWhiteBranch": {
+    "NAME": "初生白枝",
+    "FLAVOR": "从世界的中心，取来的一段新枝。",
+    "DESCRIPTIONS": [
+      "每次你往自己的牌组中加入一张卡牌时，增加 #b2 点最大生命值。"
+    ]
+  },
+  "NahidaMod:Jinn": {
+    "NAME": "镇灵",
+    "FLAVOR": "它拥有着神秘而强大的力量。",
+    "DESCRIPTIONS": [
+      "在每回合开始时获得 [E] 。 NL 战斗开始时，使你抽牌堆的随机 #b2 张牌获得 #b2 点 #r失活 。"
+    ]
+  },
+  "NahidaMod:Heart": {
+    "NAME": "神之心",
+    "FLAVOR": "尘世七执政身份的象征，隶属于草木的主宰",
+    "DESCRIPTIONS": [
+      "每 #b4 回合，获得 #b1 点 #y智慧 。"
+    ]
+  },
+  "NahidaMod:TestRelic": {
+    "NAME": "测试",
+    "FLAVOR": "我要狠狠地测纳西妲(mod)！",
+    "DESCRIPTIONS": [
+      "右键该遗物，获得 [E] [E] ，回复10生命，抽1张牌，丢弃任意张牌，激化你3张手牌。"
+    ]
+  },
+  "NahidaMod:ApotheosisOfLuminescence": {
+    "NAME": "灵光绝唱",
+    "FLAVOR": "~",
+    "DESCRIPTIONS": [
+      "每场战斗限1次。 NL 在战斗中右键该遗物，激化你 #y全部 手牌。"
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "NahidaMod:WiseLordFormPower": {
+    "NAME": "智慧主形态",
+    "DESCRIPTIONS": [
+      " #g草木的智慧。 NL 你的回合开始时，你可以替换 #y任意张 手牌。"
+    ]
+  },
+  "NahidaMod:WisdomPower": {
+    "NAME": "智慧",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，你每有一张手牌，便 #g获得 #b",
+      "在你的回合结束时，你每有一张手牌，便 #r失去 #b",
+      " 点格挡。"
+    ]
+  },
+  "NahidaMod:ForgetPower": {
+    "NAME": "遗忘",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，你 #r失去 #b",
+      "在你的回合结束时，你 #g获得 #b",
+      " 点 #g智慧 。"
+    ]
+  },
+  "NahidaMod:NahidaMarkPower": {
+    "NAME": "蕴种印",
+    "DESCRIPTIONS": [
+      "当你打出 #y所闻遍计 时，这名敌人失去 #b",
+      " 点生命。"
+    ]
+  },
+  "NahidaMod:ReducePower": {
+    "NAME": "抽牌减少",
+    "DESCRIPTIONS": [
+      "下回合你少抽 #b",
+      " 张牌。"
+    ]
+  },
+  "NahidaMod:MelodyofRebirth": {
+    "NAME": "苏生的曲调",
+    "DESCRIPTIONS": [
+      "获得 ",
+      " 层再生。"
+    ]
+  },
+  "NahidaMod:RitualDuel": {
+    "NAME": "秘仪决斗",
+    "DESCRIPTIONS": [
+      "获得 ",
+      " 层力量,",
+      "所有敌人获得 ",
+      " 层力量，激化你的所有手牌。"
+    ]
+  },
+  "NahidaMod:SomeoneCallMyNamePower": {
+    "NAME": "最初的贤者",
+    "DESCRIPTIONS": [
+      "#g你是我布耶尔最初的贤者。 NL 每回合开始时，向你的手牌中加入 #b",
+      " 张 #g净善的遐歌 。",
+      " 张 #g净善的遐歌+ 。"
+    ]
+  },
+  "NahidaMod:LeavesAndPetalsPower": {
+    "NAME": "树与花的旋舞",
+    "DESCRIPTIONS": [
+      "你打出的牌将进入 #y抽牌堆 。"
+    ]
+  },
+  "NahidaMod:AgnihotraSutraPower": {
+    "NAME": "正法炬书",
+    "DESCRIPTIONS": [
+      "每回合开始时，获得 #b",
+      " 点 #r遗忘 。"
+    ]
+  },
+  "NahidaMod:OrmosPower": {
+    "NAME": "喧繁之港",
+    "DESCRIPTIONS": [
+      "你每激化一张牌，抽 #b",
+      " 张牌。"
+    ]
+  },
+  "NahidaMod:VarunaGathaPower": {
+    "NAME": "水天供书",
+    "DESCRIPTIONS": [
+      "你每将抽牌堆洗牌一次，就获得 #b",
+      " 点 [E] 。"
+    ]
+  },
+  "NahidaMod:VimanaAgamPower": {
+    "NAME": "吉祥具书",
+    "DESCRIPTIONS": [
+      "你每将抽牌堆洗牌一次，就随机在 #y本场战斗中升级 你牌组中的 #b",
+      " 张牌。"
+    ]
+  },
+  "NahidaMod:ReturnCardToHandPower": {
+    "NAME": "返回手牌",
+    "DESCRIPTIONS": [
+      "你打出的下 #b",
+      " 张牌会返回你的手牌。"
+    ]
+  },
+  "NahidaMod:InitialWishPower": {
+    "NAME": "几初的智愿",
+    "DESCRIPTIONS": [
+      "你的回合开始时，获得 #b",
+      " 点 [E] 。"
+    ]
+  },
+  "NahidaMod:DawnOfWisdomPower": {
+    "NAME": "慧光启曙",
+    "DESCRIPTIONS": [
+      "你的回合开始时，将你 #y抽牌堆 中的 #b",
+      " 张牌加入到你的手牌中。",
+      "我的抽牌堆是 #r空的 ！"
+    ]
+  },
+  "NahidaMod:GracefulContemplationPower": {
+    "NAME": "于智境谛思",
+    "DESCRIPTIONS": [
+      "接下来 #b",
+      " 个回合，你无法受到伤害。",
+      "本回合你无法受到伤害。"
+    ]
+  },
+  "NahidaMod:HeronGuardPower": {
+    "NAME": "苍鹭之护",
+    "DESCRIPTIONS": [
+      "每回合开始时，向你的手牌中加入 #b",
+      " 张 #g边沙聚垒障 。",
+      " 张 #g边沙聚垒障+ 。"
+    ]
+  },
+  "NahidaMod:QPower": {
+    "NAME": "摩耶之殿",
+    "DESCRIPTIONS": [
+      "#g来我家做客吧~。 NL 每回合开始时，激化你至多 #b",
+      " 张手牌。"
+    ]
+  },
+  "NahidaMod:WallPower": {
+    "NAME": "防沙壁",
+    "DESCRIPTIONS": [
+      "你每次失去生命时，减少失去的生命值 #b",
+      " 点。"
+    ]
+  },
+  "NahidaMod:DefectByThornPower": {
+    "NAME": "荆棘护身",
+    "DESCRIPTIONS": [
+      "你的回合结束时，获得 #b",
+      " 点 #g荆棘 。"
+    ]
+  },
+  "NahidaMod:SilencePower": {
+    "NAME": "沉默",
+    "DESCRIPTIONS": [
+      "你不能打出 *能力牌 。",
+      "我现在不能打出 #b能力牌 ！"
+    ]
+  }
+}

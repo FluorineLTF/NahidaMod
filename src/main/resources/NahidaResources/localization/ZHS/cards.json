@@ -1,0 +1,411 @@
+{
+  "NahidaMod:NahidaCard": {
+  "NAME": "源之歌",
+  "DESCRIPTION": "草木的养主。"
+},
+  "NahidaMod:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "NahidaMod:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "NahidaMod:WiseLordForm": {
+    "NAME": "智慧主形态",
+    "DESCRIPTION": "你的回合开始时，你可以替换 *任意张 手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时，你可以替换 *任意张 手牌。"
+  },
+  "NahidaMod:BreakCycle": {
+    "NAME": "斩破轮回",
+    "DESCRIPTION": "造成等同于你本回合打出的非状态、诅咒卡牌数 !D! 倍的伤害。 NL 结束你的回合。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （你本回合打出过 ",
+      " 张符合要求的卡牌。）",
+      " 张符合要求的卡牌。）"
+    ]
+  },
+  "NahidaMod:RemainYourMora": {
+    "NAME": "留下摩拉来！",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得与所造成的未被格挡的伤害相等的 *金币 。"
+  },
+  "NahidaMod:SeeThrough": {
+    "NAME": "看破",
+    "DESCRIPTION": "如果一名敌人的意图是攻击，获得 !M! 点 nahidamod:智慧 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "如果一名敌人的意图是攻击，获得 !M! 点 nahidamod:智慧 。"
+  },
+  "NahidaMod:PerusingScripture": {
+    "NAME": "遐叶论经",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予其 !M! 层 虚弱 。"
+  },
+  "NahidaMod:LongAlliance": {
+    "NAME": "漫长的盟约",
+    "DESCRIPTION": "分别将你抽牌堆和弃牌堆里的一张牌放入你的手牌中。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "分别将你抽牌堆和弃牌堆里的一张牌放入你的手牌中。"
+  },
+  "NahidaMod:FlashLight": {
+    "NAME": "如光乍现",
+    "DESCRIPTION": "获得 !M! 点 nahidamod:智慧 。本回合结束后，失去 !M! 点 nahidamod:智慧 。"
+  },
+  "NahidaMod:PaintedDome": {
+    "NAME": "繁绘隅穹",
+    "DESCRIPTION": "本回合你每打出 !M! 张非状态、诅咒牌，就获得1点 nahidamod:智慧 。 NL  消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （你本回合打出过 ",
+      " 张符合要求的卡牌。）",
+      " 张符合要求的卡牌。）"
+    ]
+  },
+  "NahidaMod:CannedKnowledge": {
+    "NAME": "罐装知识",
+    "DESCRIPTION": "获得 !M! 点 nahidamod:智慧 ，然后将这张卡从你的卡组中移除。 NL  固有 。 NL  消耗 。"
+  },
+  "NahidaMod:SurasthanaFantasia": {
+    "NAME": "净善的遐歌",
+    "DESCRIPTION": "造成 !D! 点伤害，获得1点 nahidamod:智慧 。 NL  消耗 。"
+  },
+  "NahidaMod:VagrantWandering": {
+    "NAME": "无羁的漫游",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若这张牌被保留，你在下回合开始时获得 *1 点能量。"
+  },
+  "NahidaMod:Paranoia": {
+    "NAME": "草木皆兵",
+    "DESCRIPTION": "造成 !D! 点伤害。若敌人处于 虚弱 状态，再造成 !D! 点伤害。"
+  },
+  "NahidaMod:UnyieldingWitness": {
+    "NAME": "不移的恭默",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 你每打出此牌一次，你下回合就少抽1张牌。 NL  保留 。"
+  },
+  "NahidaMod:FakeSky": {
+    "NAME": "虚假之天",
+    "DESCRIPTION": " 预见 !M! 。 NL  固有 。 NL  消耗 。"
+  },
+  "NahidaMod:BeyondKlesha": {
+    "NAME": "劫波破执",
+    "DESCRIPTION": " 预见 !M! 。 NL  消耗 你抽牌堆顶部的一张牌。"
+  },
+  "NahidaMod:ForbiddenKnowledge": {
+    "NAME": "禁忌知识",
+    "DESCRIPTION": "失去3点生命，抽3张牌。"
+  },
+  "NahidaMod:JustPunishment": {
+    "NAME": "奉辞伐罪",
+    "DESCRIPTION": "对一名敌人施加 !M! 层 易伤 ，并 nahidamod:激化 你所有手牌。"
+  },
+  "NahidaMod:Reverie": {
+    "NAME": "遐想",
+    "DESCRIPTION": "获得 !B! 点格挡，选择一张手牌并 nahidamod:激化 。"
+  },
+  "NahidaMod:E": {
+    "NAME": "所闻遍计",
+    "DESCRIPTION": "给予一名敌人 !M! 层蕴种印，所有拥有蕴种印的敌人失去与层数相等的生命。 NL 当有卡牌被 nahidamod:激化 时，这张牌将会从 *弃牌堆 回到你的手牌中。"
+  },
+  "NahidaMod:Kusava": {
+    "NAME": "苦舍桓",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  nahidamod:充能 。 NL  nahidamod:无限激化 。 NL 每当这张牌被 nahidamod:激化 时，其下一次打出的伤害增加 !M! 点。"
+  },
+  "NahidaMod:UndisturbedSlumber": {
+  "NAME": "勿扰沉眠",
+  "DESCRIPTION": "获得 !B! 点 格挡 ，本回合你不能再抽牌。"
+},
+  "NahidaMod:MelodyOfRebirth": {
+    "NAME": "苏生的曲调",
+    "DESCRIPTION": "获得 !M! 层 *再生 。"
+  },
+  "NahidaMod:RitualDuel": {
+    "NAME": "秘仪决斗",
+    "DESCRIPTION": "获得 !M! 点力量，所有敌人获得1点力量。 NL  nahidamod:激化 你的所有手牌。"
+  },
+  "NahidaMod:EvergreenWish": {
+    "NAME": "常绿的希冀",
+    "DESCRIPTION": " 获得 !B! 点 格挡 ，将你的 !M! 张手牌在本回合 保留 。 NL  nahidamod:充能 。"
+  },
+  "NahidaMod:Fragrance": {
+    "NAME": "灵酚香",
+    "DESCRIPTION": " 不能被打出 。 NL  nahidamod:无限激化 。 NL 没有失活的此牌被 nahidamod:激化 时，使得所有敌人获得1层 虚弱 ，失去1点 力量 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 ， 保留 。 NL  nahidamod:无限激化 。 NL 没有失活的此牌被 nahidamod:激化 时，使得所有敌人获得1层 虚弱 ，失去1点 力量 。"
+  },
+  "NahidaMod:SomeoneCallMyName": {
+    "NAME": "何人唤我名",
+    "DESCRIPTION": "每回合开始时，向你的手牌中加入一张 *净善的遐歌 。",
+    "UPGRADE_DESCRIPTION": "每回合开始时，向你的手牌中加入一张 *净善的遐歌+ 。"
+  },
+  "NahidaMod:AgnihotraSutra": {
+    "NAME": "正法炬书",
+    "DESCRIPTION": "失去 !M! 点 nahidamod:智慧 。每回合开始时，获得2点 力量 。"
+  },
+  "NahidaMod:TheNobleWitness": {
+    "NAME": "崇高的见证",
+    "DESCRIPTION": "令你的一张手牌在本场战斗中耗能为0。 NL  消耗 。"
+  },
+  "NahidaMod:VitalCandle": {
+    "NAME": "生之烛",
+    "DESCRIPTION": "获得 !M! 层 无实体 ，将一张 *殄熄 (失活3)加入到你的弃牌堆中。"
+  },
+  "NahidaMod:Die": {
+    "NAME": "殄熄",
+    "DESCRIPTION": "如果这张牌的失活数为0，则回合结束时你会死亡。",
+    "UPGRADE_DESCRIPTION": "你的回合结束时死亡。",
+    "EXTENDED_DESCRIPTION": [
+      "我应该在回合结束前 #r~将殄熄从手牌中移出~  #r...... "
+    ]
+  },
+  "NahidaMod:LeavesReturnToRoot": {
+    "NAME": "落叶归根",
+    "DESCRIPTION": " 消耗 你弃牌堆中的一张牌并将其从你的卡组中 *移除 。 NL  消耗 。"
+  },
+  "NahidaMod:Ormos": {
+    "NAME": "喧繁之港",
+    "DESCRIPTION": "每当有卡牌被 nahidamod:激化 时，抽一张牌。"
+  },
+  "NahidaMod:LeavesAndPetals": {
+    "NAME": "树与花的旋舞",
+    "DESCRIPTION": "你打出的牌将进入 *抽牌堆 。"
+  },
+  "NahidaMod:VimanaAgam": {
+    "NAME": "水天供书",
+    "DESCRIPTION": "你每将抽牌堆洗牌一次，就获得1点 [E] 。"
+  },
+  "NahidaMod:VarunaGatha": {
+    "NAME": "吉祥具书",
+    "DESCRIPTION": "你每将抽牌堆洗牌一次，就随机在本场战斗中升级你卡组中的 !M! 张牌。"
+  },
+  "NahidaMod:Cycle": {
+    "NAME": "萦旋",
+    "DESCRIPTION": "将你的一张手牌放回你的抽牌堆中。 NL 抽 !M! 张牌。 NL  nahidamod:充能 。",
+    "EXTENDED_DESCRIPTION": [
+      "抽 !M! 张牌。 NL 将你的一张手牌放回你的抽牌堆中。"
+    ]
+  },
+  "NahidaMod:LostSong": {
+    "NAME": "失落的歌调",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将你弃牌堆中的一张牌返回到你的抽牌堆当中。 NL  nahidamod:充能 。"
+  },
+  "NahidaMod:ForeverFlowing": {
+    "NAME": "永世流沔",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将你手牌中至多2张牌放回你的抽牌堆顶端。 NL  nahidamod:充能 。"
+  },
+  "NahidaMod:TouringLight": {
+    "NAME": "游光示现",
+    "DESCRIPTION": " 不能被打出 。 NL 当你抽到这张牌时，将至多 !M! 张手牌返回你的抽牌堆。"
+  },
+  "NahidaMod:EndlessCycle": {
+    "NAME": "往复不息",
+    "DESCRIPTION": "将你弃牌堆中所有费用为0的卡洗入你的抽牌堆。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "将你弃牌堆中所有费用为0的卡洗入你的抽牌堆。 NL  nahidamod:充能 。"
+  },
+  "NahidaMod:MazeWanderer": {
+    "NAME": "迷宫的游人",
+    "DESCRIPTION": "将你所有手牌返回你的抽牌堆。 NL 获得 [E] [E] [E] 。 NL 抽5张牌。 NL  消耗 。"
+  },
+  "NahidaMod:WhiteWoodMemory": {
+    "NAME": "白木的追忆",
+    "DESCRIPTION": "获得 !B! 点 格挡 ，将本场战斗中你打出的上 !M! 张、且现在在抽牌堆或弃牌堆的牌放回你的手牌。 NL  nahidamod:充能 。"
+  },
+  "NahidaMod:WhispersLinger": {
+    "NAME": "细语回萦",
+    "DESCRIPTION": "造成 !D! 点伤害，你打出的下一张牌将返回你的手牌。 NL  nahidamod:充能 。"
+  },
+  "NahidaMod:CutOffEvilKarma": {
+    "NAME": "斩绝恶缘",
+    "DESCRIPTION": "造成 !D! 点伤害，将你的抽牌堆 *重新洗牌 。"
+  },
+  "NahidaMod:WorldForgetMe": {
+    "NAME": "世界，遗忘我",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  消耗 所有 *状态牌 与 *诅咒牌 。 NL  消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "让世界，彻底遗忘我......",
+      "造成 !D! 点伤害， 消耗 你弃牌堆中所有的牌。 NL  消耗 。"
+    ]
+  },
+  "NahidaMod:AntiSilent": {
+    "NAME": "正明",
+    "DESCRIPTION": "消除一层 NL  nahidamod:沉默 。 NL  消耗 。"
+  },
+  "NahidaMod:GracefulContemplation": {
+    "NAME": "于智境谛思",
+    "DESCRIPTION": "本回合你无法受到伤害，获得一层 NL  nahidamod:沉默 。 NL 向你的手牌中加入一张 *正明 (失活1)。"
+  },
+  "NahidaMod:Imagination": {
+    "NAME": "奇思妙想",
+    "DESCRIPTION": "将一张 *罕见牌 加入到你的手牌中。 NL  消耗 。"
+  },
+  "NahidaMod:CalmlyRespond": {
+    "NAME": "稳谋应对",
+    "DESCRIPTION": "当你手中没有 *攻击牌 时才可打出。 NL 获得 !B! 点格挡。"
+  },
+  "NahidaMod:PaleFire": {
+    "NAME": "微暗之火",
+    "DESCRIPTION": "获得 !B! 点格挡，造成 !D! 点伤害。 NL 获得 nahidamod:失活 2。"
+  },
+  "NahidaMod:WeavingDreams": {
+    "NAME": "编织梦境",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL  消耗 。"
+  },
+  "NahidaMod:ThinkingInCrises": {
+    "NAME": "急中生智",
+    "DESCRIPTION": "如果一名敌人的意图是攻击，打出你抽牌堆顶部的一张牌。"
+  },
+  "NahidaMod:SmilesAndTears": {
+    "NAME": "薄暮的欢叹",
+    "DESCRIPTION": "将任意张手牌放回你的抽牌堆，结束你的回合。 NL 下回合开始时，获得 1 点 [E] 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "将任意张手牌放回你的抽牌堆，结束你的回合。 NL 下回合开始时，获得 1 点 [E] 。"
+  },
+  "NahidaMod:Manifestation": {
+    "NAME": "显象缚结",
+    "DESCRIPTION": "抽牌至你的手牌上限。每抽一张牌，就对所有敌人造成X点伤害。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "抽牌至你的手牌上限。每抽一张牌，就对所有敌人造成X+1点伤害。 NL  消耗 。"
+  },
+  "NahidaMod:NeverForget": {
+    "NAME": "我不曾忘记",
+    "DESCRIPTION": "你的弃牌堆中每有 !M! 张牌，获得1点 nahidamod:智慧 。"
+  },
+  "NahidaMod:InitialWish": {
+    "NAME": "几初的智愿",
+    "DESCRIPTION": "获得 !M! 层 脆弱 。 NL 你的回合开始时，获得1点 [E] 。"
+  },
+  "NahidaMod:Wish": {
+    "NAME": "赐福",
+    "DESCRIPTION": "赠予纳西妲： NL （赠予 *惊喜 ）在本场战斗中选择 !D! 张牌到你的手牌中，它们在本回合耗能为0， NL （赠予 *甜蜜 ）回复 !M! %最大生命值， NL （赠予 *回忆 ）获得 !B! 点 nahidamod:智慧 。 NL  消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （回复",
+      "点生命值。）",
+      "赐福： NL "
+    ]
+  },
+  "NahidaMod:Sweet": {
+    "NAME": "甜蜜",
+    "DESCRIPTION": "回复 !M! %最大生命值。"
+  },
+  "NahidaMod:Memory": {
+    "NAME": "回忆",
+    "DESCRIPTION": "获得 !M! 点 nahidamod:智慧 。"
+  },
+  "NahidaMod:Surprise": {
+    "NAME": "惊喜",
+    "DESCRIPTION": "在本场战斗中选择 !M! 张牌到你的手牌中，它们在本回合耗能为0。"
+  },
+  "NahidaMod:DawnOfWisdom": {
+    "NAME": "慧光启曙",
+    "DESCRIPTION": "你的回合开始时，将你 *抽牌堆 中的一张牌加入到你的手牌中。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时，将你 *抽牌堆 中的一张牌加入到你的手牌中。"
+  },
+  "NahidaMod:MindfulTreasure": {
+    "NAME": "心识蕴藏",
+    "DESCRIPTION": "每回合结束时，将至多 !M! 张牌保留。"
+  },
+  "NahidaMod:DustyMemories": {
+    "NAME": "尘封的往事",
+    "DESCRIPTION": "获得 !M! 点 nahidamod:智慧 。"
+  },
+  "NahidaMod:BorderSandBarrier": {
+    "NAME": "边沙聚垒障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL  保留 。 NL  消耗 。"
+  },
+  "NahidaMod:HeronGuard": {
+    "NAME": "苍鹭之护",
+    "DESCRIPTION": "每回合开始时，向你的手牌中加入一张 *边沙聚垒障 （失活1）。",
+    "UPGRADE_DESCRIPTION": "每回合开始时，向你的手牌中加入一张 *边沙聚垒障+ （失活1）。"
+  },
+  "NahidaMod:SanctuaryOfExiles": {
+    "NAME": "沙民的庇护者",
+    "DESCRIPTION": "在你的手牌中加入2张 *边沙聚垒障 （失活1）。",
+    "UPGRADE_DESCRIPTION": "在你的手牌中加入2张 *边沙聚垒障+ （失活1）。"
+  },
+  "NahidaMod:RapidMetabolism": {
+    "NAME": "急速代谢",
+    "DESCRIPTION": "向你的手牌中加入一张 *疼痛 。 NL 抽 !M! 张牌， nahidamod:激化 你的所有手牌。"
+  },
+  "NahidaMod:Insight": {
+    "NAME": "善见",
+    "DESCRIPTION": " 预见 !M! 。 NL 抽 !B! 张牌。"
+  },
+  "NahidaMod:UnfulfilledDream": {
+    "NAME": "未竟之梦",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 向你的抽牌堆中加入 !M! 张 *晕眩。"
+  },
+  "NahidaMod:WhisperInWood": {
+    "NAME": "清风散林缬",
+    "DESCRIPTION": "获得 [E] [E] 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL  消耗 。"
+  },
+  "NahidaMod:SelfExploitation": {
+    "NAME": "自我透支",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 失去X+1点生命值上限（X为这张牌在本回合内被打出的次数）。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 失去X+1点生命值上限（X为这张牌在本回合内被打出的次数）。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （失去 ",
+      " 点生命值上限）"
+    ]
+  },
+  "NahidaMod:WhirlingFoliage": {
+    "NAME": "飞叶迴斜",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 这张牌会返回你的 *抽牌堆 中。"
+  },
+  "NahidaMod:NoRespect": {
+    "NAME": "目无尊卑！",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人的意图为攻击，则给予其 !M! 层 虚弱 。"
+  },
+  "NahidaMod:SongOfThousandNight": {
+    "NAME": "千夜的曙歌",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  nahidamod:充能 。 NL 这张牌每被 nahidamod:激化 一次，增加 !M! 点伤害。"
+  },
+  "NahidaMod:GuiltByAssociation": {
+    "NAME": "蔓引株连",
+    "DESCRIPTION": "弃置你手牌中的所有攻击牌，每弃置一张便 预见 一张牌，并对随机一名敌人造成 !D! 点伤害。"
+  },
+  "//NahidaMod:AkashaPulses": {
+    "NAME": "虚空鼓动",
+    "DESCRIPTION": "向你的抽牌堆中加入一张有效益的 *集智成锋 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "向你的抽牌堆中加入一张 *集智成锋+ 。 NL 消耗 。"
+  },
+  "//NahidaMod:WisdomSharpen": {
+    "NAME": "集智成锋",
+    "DESCRIPTION": "你每拥有1点 nahidamod:智慧 ，就在本回合获得X点力量。 NL  nahidamod:充能 。",
+    "UPGRADE_DESCRIPTION": "你每拥有1点 nahidamod:智慧 ，就在本回合获得X+1点力量。 NL  nahidamod:充能 。",
+    "EXTENDED_DESCRIPTION": [
+      "你每拥有1点 nahidamod:智慧 ，就在本回合获得 !M! 点力量。 NL  nahidamod:充能 。",
+      "我现在无法通过这张卡获得任何力量",
+      "我无法通过这张集智成锋获得任何力量，即它 #r没有效益 ！"
+    ]
+  },
+  "NahidaMod:AkashaPulses": {
+    "NAME": "虚空鼓动",
+    "DESCRIPTION": "向你的抽牌堆中加入X张 *劫火高扬 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "向你的抽牌堆中加入X张 *劫火高扬+ 。 NL 消耗 。"
+  },
+  "NahidaMod:EscalatingRage": {
+    "NAME": "劫火高扬",
+    "DESCRIPTION": "造成 !D! 点伤害，选择一张手牌并 nahidamod:激化 。这张牌将会回到你的抽牌堆当中。"
+  },
+  "NahidaMod:ConsciousnessDetach": {
+    "NAME": "意识剥离",
+    "DESCRIPTION": "令一名敌人在本回合失去 !M! 点力量。 NL 若其处于 虚弱 状态，则改为 *永久 。 NL  消耗 。"
+  },
+  "NahidaMod:A": {
+    "NAME": "行相",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将你的一张手牌返回抽牌堆中，抽一张牌。"
+  },
+  "NahidaMod:Q": {
+    "NAME": "心景幻成",
+    "DESCRIPTION": "每回合开始时， nahidamod:激化 你的一张手牌。"
+  },
+  "NahidaMod:JoltsInForest": {
+    "NAME": "森芒顷动",
+    "DESCRIPTION": "对所有敌人造成 !D! 点 伤害 。 NL 为你所有手牌增加一层 nahidamod:失活 。"
+  },
+  "NahidaMod:WallOfSamiel": {
+    "NAME": "防沙壁",
+    "DESCRIPTION": "你每次失去生命时，减少失去的生命值 *1 点。",
+    "UPGRADE_DESCRIPTION":"你每次失去生命时，减少失去的生命值 *1 点。 NL  固有 。"
+  },
+  "NahidaMod:DefectByThorn": {
+    "NAME": "荆棘护身",
+    "DESCRIPTION": "你的回合结束时，获得 !M! 点 *荆棘 。",
+    "UPGRADE_DESCRIPTION":"你的回合结束时，获得 !M! 点 *荆棘 。 NL  固有 。"
+  },
+  "NahidaMod:CriticalHit": {
+    "NAME": "会心一击",
+    "DESCRIPTION": "造成 !D! 点 伤害 。 NL 你每拥有1点 nahidamod:智慧 ，就使这张牌的基础伤害增加你 nahidamod:智慧 层数的 !M! 倍。"
+  }
+}
