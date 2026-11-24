@@ -26,6 +26,7 @@ public class InactiveHelper {
         }
         InactiveField.inactives.set(card, Math.max(0, amount));
         card.initializeDescription();
+        resetGlowIfActive(card);
         refreshHandGlow();
     }
 
@@ -46,6 +47,7 @@ public class InactiveHelper {
             InactiveField.inactives.set(card, current - 1);
             card.superFlash();
             card.initializeDescription();
+            resetGlowIfActive(card);
             refreshHandGlow();
         }
     }
@@ -68,6 +70,7 @@ public class InactiveHelper {
         if (triggered) {
             card.superFlash(Color.LIME.cpy());
             card.initializeDescription();
+            resetGlowIfActive(card);
             notifyQuickenListeners(card);
             refreshHandGlow();
         }
@@ -88,6 +91,14 @@ public class InactiveHelper {
             if (c instanceof OnAnyCardQuickenedListener) {
                 ((OnAnyCardQuickenedListener) c).onAnyCardQuickened(quickenedCard);
             }
+        }
+    }
+
+    private static void resetGlowIfActive(AbstractCard card) {
+        if (card != null && getInactive(card) <= 0
+                && card.glowColor != null
+                && card.glowColor.equals(nahidamod.patches.InactivePatch.INACTIVE_GLOW_COLOR)) {
+            card.glowColor = nahidamod.patches.InactivePatch.DEFAULT_GLOW_COLOR.cpy();
         }
     }
 

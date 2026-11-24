@@ -17,10 +17,11 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import nahidamod.card.Basic.Akara;
 import nahidamod.card.Basic.Defend;
+import nahidamod.card.Basic.ForbiddenKnowledge;
 import nahidamod.card.Basic.Strike;
 import nahidamod.modcore.NahidaMod;
-import nahidamod.relics.BlossomingWhiteBranch;
 import nahidamod.relics.Heart;
 
 import java.util.ArrayList;
@@ -93,8 +94,8 @@ public class MyCharacter extends CustomPlayer {
         for(int x = 0; x<4; x++) {
             retVal.add(Defend.ID);
         }
-        retVal.add("NahidaMod:Reverie");
-        retVal.add("NahidaMod:ForbiddenKnowledge");
+        retVal.add(Akara.ID);
+        retVal.add(ForbiddenKnowledge.ID);
         return retVal;
     }
 
@@ -102,7 +103,6 @@ public class MyCharacter extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Heart.ID);
-        retVal.add(BlossomingWhiteBranch.ID);
         return retVal;
     }
 

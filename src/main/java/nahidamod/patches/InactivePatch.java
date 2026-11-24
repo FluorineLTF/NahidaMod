@@ -16,6 +16,9 @@ import nahidamod.helpers.ModHelper;
 
 public class InactivePatch {
 
+    public static final Color INACTIVE_GLOW_COLOR = new Color(1.0F, 0.15F, 0.15F, 0.25F);
+    public static final Color DEFAULT_GLOW_COLOR = new Color(0.2F, 0.9F, 1.0F, 0.25F);
+
     private static UIStrings uiStrings;
 
     private static String[] getText() {
@@ -85,12 +88,23 @@ public class InactivePatch {
 
     @SpirePatch(clz = CardGroup.class, method = "glowCheck")
     public static class RedGlowPatch {
+        @SpirePrefixPatch
+        public static void Prefix(CardGroup __instance) {
+            if (__instance.type == CardGroup.CardGroupType.HAND) {
+                for (AbstractCard c : __instance.group) {
+                    if (c.glowColor != null && c.glowColor.equals(INACTIVE_GLOW_COLOR)) {
+                        c.glowColor = DEFAULT_GLOW_COLOR.cpy();
+                    }
+                }
+            }
+        }
+
         @SpirePostfixPatch
         public static void Postfix(CardGroup __instance) {
             if (__instance.type == CardGroup.CardGroupType.HAND) {
                 for (AbstractCard c : __instance.group) {
                     if (InactiveHelper.getInactive(c) > 0) {
-                        c.glowColor = Color.RED.cpy();
+                        c.glowColor = INACTIVE_GLOW_COLOR.cpy();
                         c.beginGlowing();
                     }
                 }

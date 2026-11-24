@@ -15,9 +15,9 @@
   },
   "NahidaMod:Heart": {
     "NAME": "神之心",
-    "FLAVOR": "尘世七执政身份的象征，隶属于草木的主宰",
+    "FLAVOR": "尘世七执政身份的象征，隶属于草木的主宰。",
     "DESCRIPTIONS": [
-      "每 #b4 回合，获得 #b1 点 #y智慧 。"
+      "每场战斗开始时，你获得 #b1 点 #y智慧 。"
     ]
   },
   "NahidaMod:TestRelic": {

@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.*;
 import nahidamod.Characters.MyCharacter;
 import com.badlogic.gdx.graphics.Color;
+import nahidamod.card.Basic.Akara;
 import nahidamod.card.Basic.Defend;
-import nahidamod.card.Basic.Reverie;
 import nahidamod.card.Basic.Strike;
 import nahidamod.card.Common.*;
 import nahidamod.card.Common.NoRespect;
@@ -79,6 +79,7 @@ public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, Ed
     public void receiveEditCards() {
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
+        BaseMod.addCard(new Akara());
         BaseMod.addCard(new WiseLordForm());
         BaseMod.addCard(new BreakCycle());
         BaseMod.addCard(new RemainYourMora());

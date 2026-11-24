@@ -11,6 +11,10 @@
     "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
+  "NahidaMod:Akara": {
+    "NAME": "行相",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL nahidamod:激化 你的 !M! 张手牌。"
+  },
   "NahidaMod:WiseLordForm": {
     "NAME": "智慧主形态",
     "DESCRIPTION": "你的回合开始时，你可以替换 *任意张 手牌。",
@@ -86,7 +90,7 @@
   },
   "NahidaMod:ForbiddenKnowledge": {
     "NAME": "禁忌知识",
-    "DESCRIPTION": "失去3点生命，抽3张牌。"
+    "DESCRIPTION": "获得 [E] [E] 。 NL 为你手牌中随机一张牌添加 #b1 层 nahidamod:失活 。 NL 向弃牌堆中添加一张此牌的复制。"
   },
   "NahidaMod:JustPunishment": {
     "NAME": "奉辞伐罪",
@@ -94,7 +98,7 @@
   },
   "NahidaMod:Reverie": {
     "NAME": "遐想",
-    "DESCRIPTION": "获得 !B! 点格挡，选择一张手牌并 nahidamod:激化 。"
+    "DESCRIPTION": "获得 [E] 。 NL 获得 !M! 层 nahidamod:灵感 。"
   },
   "NahidaMod:E": {
     "NAME": "所闻遍计",
