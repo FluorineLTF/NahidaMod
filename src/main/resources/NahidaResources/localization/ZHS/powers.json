@@ -8,9 +8,15 @@
   "NahidaMod:WisdomPower": {
     "NAME": "智慧",
     "DESCRIPTIONS": [
-      "在你的回合结束时，你每有一张手牌，便 #g获得 #b",
-      "在你的回合结束时，你每有一张手牌，便 #r失去 #b",
-      " 点格挡。"
+      "你当前拥有 #b",
+      " 点 #y智慧 ，可用于支付特定卡牌的花费或增强其效果。"
+    ]
+  },
+  "NahidaMod:InspirationPower": {
+    "NAME": "灵感",
+    "DESCRIPTIONS": [
+      "再获得 #b",
+      " 层 #y灵感 时，产生 #y灵感爆发 并获得 #b1 点 #y智慧 。"
     ]
   },
   "NahidaMod:ForgetPower": {
@@ -157,6 +163,22 @@
     "DESCRIPTIONS": [
       "你不能打出 *能力牌 。",
       "我现在不能打出 #b能力牌 ！"
+    ]
+  },
+  "NahidaMod:DendroCorePower": {
+    "NAME": "草原核",
+    "DESCRIPTIONS": [
+      "你当前拥有 #b",
+      " 枚 #y草原核 （下回合结束引爆 #b",
+      " 枚，两回合后引爆 #b",
+      " 枚）。每枚 #y草原核 引爆时对随机一名敌人造成 #b12 点伤害。"
+    ]
+  },
+  "NahidaMod:BountifulCorePower": {
+    "NAME": "丰穰之核",
+    "DESCRIPTIONS": [
+      "回合结束时，引爆 #b",
+      " 枚 #y丰穰之核 ，每枚对所有敌人造成 #b18 点伤害。"
     ]
   }
 }

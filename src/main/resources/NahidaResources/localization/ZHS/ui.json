@@ -5,12 +5,12 @@
       "替换"
     ]
   },
-    "NahidaMod:ActedAction": {
-      "TEXT": [
-        "激化",
-        "我 #r没有 可以被激化的卡牌！"
-      ]
-    },
+  "NahidaMod:ActedAction": {
+    "TEXT": [
+      "激化",
+      "我 #r没有 可以被激化的卡牌！"
+    ]
+  },
   "NahidaMod:NahidaCard": {
     "TEXT": [
       " NL  nahidamod:失活 ",
@@ -57,6 +57,13 @@
   "NahidaMod:BeyondKleshaAction": {
     "TEXT": [
       "我的抽牌堆是 #r空的 ！"
+    ]
+  },
+  "NahidaMod:InactiveUI": {
+    "TEXT": [
+      " NL nahidamod:失活 ",
+      " 。",
+      "这张牌已失活，暂时无法打出。"
     ]
   }
 }

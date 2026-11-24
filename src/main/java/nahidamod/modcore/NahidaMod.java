@@ -22,8 +22,12 @@ import nahidamod.card.Uncommon.*;
 import nahidamod.card.Wish.Memory;
 import nahidamod.card.Wish.Surprise;
 import nahidamod.card.Wish.Sweet;
+import nahidamod.helpers.ForgetHelper;
+import nahidamod.helpers.NextBattleManager;
 import nahidamod.potions.WisdomPotion;
+import nahidamod.powers.InspirationPower;
 import nahidamod.relics.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import java.nio.charset.StandardCharsets;
 
@@ -31,7 +35,7 @@ import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 import static nahidamod.Characters.MyCharacter.Enums.MY_CHARACTER;
 
 @SpireInitializer
-public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber ,PostInitializeSubscriber{
+public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, PostInitializeSubscriber, OnStartBattleSubscriber, PostBattleSubscriber {
     @Override
     public void receiveEditCharacters() {
         // 向basemod注册人物
@@ -213,11 +217,10 @@ public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, Ed
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelic(new BlossomingWhiteBranch(), RelicType.SHARED);
-        BaseMod.addRelic(new Jinn(), RelicType.SHARED);
-        BaseMod.addRelic(new TestRelic(), RelicType.SHARED);
-        BaseMod.addRelic(new ApotheosisOfLuminescence(), RelicType.SHARED);
-        BaseMod.addRelic(new Heart(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new BlossomingWhiteBranch(), EXAMPLE_CARD);
+        BaseMod.addRelicToCustomPool(new Jinn(), EXAMPLE_CARD);
+        BaseMod.addRelicToCustomPool(new ApotheosisOfLuminescence(), EXAMPLE_CARD);
+        BaseMod.addRelicToCustomPool(new Heart(), EXAMPLE_CARD);
     }
 
     public void receiveEditStrings() {//本地化位置，目前只有中文
@@ -232,7 +235,20 @@ public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, Ed
 
     @Override
     public void receivePostInitialize() {
+        BaseMod.addSaveField("NahidaMod:NextBattleData", NextBattleManager.INSTANCE);
         addPotion();
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom room) {
+        InspirationPower.totalGainedThisCombat = 0;
+        ForgetHelper.clear();
+        NextBattleManager.INSTANCE.applyAndClear();
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom room) {
+        ForgetHelper.onPostBattle(room);
     }
 
     public void addPotion () {
