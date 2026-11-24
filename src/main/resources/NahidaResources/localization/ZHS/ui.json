@@ -70,5 +70,21 @@
     "TEXT": [
       "激化"
     ]
+  },
+  "NahidaMod:WhispersLingerUI": {
+    "TEXT": [
+      "选择一张弃牌堆中的牌消耗，并在下回合开始时将其复制品加入手牌。"
+    ]
+  },
+  "NahidaMod:EtherealUI": {
+    "TEXT": [
+      "令其获得虚无",
+      " NL 虚无 。"
+    ]
+  },
+  "NahidaMod:QuickenDiscardUI": {
+    "TEXT": [
+      "选择弃牌堆中的牌进行激化。"
+    ]
   }
 }

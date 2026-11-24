@@ -74,7 +74,7 @@
   },
   "NahidaMod:Paranoia": {
     "NAME": "草木皆兵",
-    "DESCRIPTION": "造成 !D! 点伤害。若敌人处于 虚弱 状态，再造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人处于 虚弱 状态，则生成 #b1 个 nahidamod:草原核 。"
   },
   "NahidaMod:UnyieldingWitness": {
     "NAME": "不移的恭默",
@@ -86,7 +86,7 @@
   },
   "NahidaMod:BeyondKlesha": {
     "NAME": "劫波破执",
-    "DESCRIPTION": " 预见 !M! 。 NL  消耗 你抽牌堆顶部的一张牌。"
+    "DESCRIPTION": "预见 !M! 。 NL 获得 #b1 层 nahidamod:灵感 。 NL nahidamod:充能 。"
   },
   "NahidaMod:ForbiddenKnowledge": {
     "NAME": "禁忌知识",
@@ -102,7 +102,8 @@
   },
   "NahidaMod:E": {
     "NAME": "所闻遍计",
-    "DESCRIPTION": "给予一名敌人 !M! 层蕴种印，所有拥有蕴种印的敌人失去与层数相等的生命。 NL 当有卡牌被 nahidamod:激化 时，这张牌将会从 *弃牌堆 回到你的手牌中。"
+    "DESCRIPTION": "给予 !M! 层 nahidamod:蕴种印 ，所有拥有 nahidamod:蕴种印 的敌人失去 #b5 点生命。 NL 当有卡牌被 nahidamod:激化 时，将这张牌从弃牌堆放回你的手牌。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 nahidamod:蕴种印 ，所有拥有 nahidamod:蕴种印 的敌人失去 #b7 点生命。 NL 当有卡牌被 nahidamod:激化 时，将这张牌从弃牌堆放回你的手牌。"
   },
   "NahidaMod:Kusava": {
     "NAME": "苦舍桓",
@@ -122,7 +123,8 @@
   },
   "NahidaMod:EvergreenWish": {
     "NAME": "常绿的希冀",
-    "DESCRIPTION": " 获得 !B! 点 格挡 ，将你的 !M! 张手牌在本回合 保留 。 NL  nahidamod:充能 。"
+    "DESCRIPTION": "将一张 *奇迹 放置在你的抽牌堆顶部。 NL 你在下场战斗开始时获得 [E] 。 NL nahidamod:遗忘 。",
+    "UPGRADE_DESCRIPTION": "将一张 *奇迹+ 放置在你的抽牌堆顶部。 NL 你在下场战斗开始时获得 [E] 。 NL nahidamod:遗忘 。"
   },
   "NahidaMod:Fragrance": {
     "NAME": "灵酚香",
@@ -176,10 +178,7 @@
   },
   "NahidaMod:Cycle": {
     "NAME": "萦旋",
-    "DESCRIPTION": "将你的一张手牌放回你的抽牌堆中。 NL 抽 !M! 张牌。 NL  nahidamod:充能 。",
-    "EXTENDED_DESCRIPTION": [
-      "抽 !M! 张牌。 NL 将你的一张手牌放回你的抽牌堆中。"
-    ]
+    "DESCRIPTION": "将你的一张手牌放回你的抽牌堆中。 NL 抽 !M! 张牌。"
   },
   "NahidaMod:LostSong": {
     "NAME": "失落的歌调",
@@ -208,7 +207,7 @@
   },
   "NahidaMod:WhispersLinger": {
     "NAME": "细语回萦",
-    "DESCRIPTION": "造成 !D! 点伤害，你打出的下一张牌将返回你的手牌。 NL  nahidamod:充能 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆中的一张牌 消耗 ，并在下回合开始时将其复制品加入到你的手牌中。"
   },
   "NahidaMod:CutOffEvilKarma": {
     "NAME": "斩绝恶缘",
@@ -244,7 +243,11 @@
   },
   "NahidaMod:WeavingDreams": {
     "NAME": "编织梦境",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL  消耗 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 消耗 。"
+  },
+  "NahidaMod:TenderBranch": {
+    "NAME": "绿枝新柔",
+    "DESCRIPTION": "生成 !M! 个 nahidamod:草原核 。 NL 消耗 。"
   },
   "NahidaMod:ThinkingInCrises": {
     "NAME": "急中生智",
@@ -410,6 +413,34 @@
   },
   "NahidaMod:CriticalHit": {
     "NAME": "会心一击",
-    "DESCRIPTION": "造成 !D! 点 伤害 。 NL 你每拥有1点 nahidamod:智慧 ，就使这张牌的基础伤害增加你 nahidamod:智慧 层数的 !M! 倍。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中你每获得 #b1 层 nahidamod:灵感 ，这张牌的伤害增加 !M! 点。"
+  },
+  "NahidaMod:GildedDash": {
+    "NAME": "流金疾驰",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL nahidamod:充能 。"
+  },
+  "NahidaMod:PureThought": {
+    "NAME": "净念",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 令你的一张手牌获得 虚无 。"
+  },
+  "NahidaMod:Syllogism": {
+    "NAME": "三段论",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 这张卡牌的伤害受到 nahidamod:智慧 的加成。"
+  },
+  "NahidaMod:Rigorous": {
+    "NAME": "严密",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若你本回合未受到未被格挡的伤害，则在下回合开始时获得 !B! 点 格挡 。"
+  },
+  "NahidaMod:Probe": {
+    "NAME": "试探",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若其造成了未被格挡的伤害，则抽 #b1 张牌。"
+  },
+  "NahidaMod:Exhortation": {
+    "NAME": "叮咛",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌放进你的抽牌堆中。 NL 这张牌在使用 !M! 次后被 消耗 。"
+  },
+  "NahidaMod:Reflection": {
+    "NAME": "反思",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL nahidamod:激化 你弃牌堆中的 !M! 张牌。"
   }
 }

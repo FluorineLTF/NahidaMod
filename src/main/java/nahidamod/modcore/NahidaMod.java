@@ -90,10 +90,7 @@ public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, Ed
         BaseMod.addCard(new PerusingScripture());
         BaseMod.addCard(new CannedKnowledge());
         BaseMod.addCard(new SurasthanaFantasia());
-        BaseMod.addCard(new VagrantWandering());
         BaseMod.addCard(new Paranoia());
-        BaseMod.addCard(new UnyieldingWitness());
-        BaseMod.addCard(new FakeSky());
         BaseMod.addCard(new BeyondKlesha());
         BaseMod.addCard(new ForbiddenKnowledge());
         BaseMod.addCard(new JustPunishment());
@@ -123,18 +120,12 @@ public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, Ed
         BaseMod.addCard(new TouringLight());
         BaseMod.addCard(new EndlessCycle());
         BaseMod.addCard(new MazeWanderer());
-        BaseMod.addCard(new LostSong());
         BaseMod.addCard(new ForeverFlowing());
-        //BaseMod.addCard(new WhiteWoodMemory());
-        BaseMod.addCard(new CutOffEvilKarma());
-        //BaseMod.addCard(new WhispersLinger());
+        BaseMod.addCard(new WhispersLinger());
+        BaseMod.addCard(new TenderBranch());
         BaseMod.addCard(new WorldForgetMe());
         BaseMod.addCard(new AntiSilent());
-        BaseMod.addCard(new Imagination());
-        BaseMod.addCard(new CalmlyRespond());
-        BaseMod.addCard(new PaleFire());
         BaseMod.addCard(new WeavingDreams());
-        BaseMod.addCard(new ThinkingInCrises());
         BaseMod.addCard(new SmilesAndTears());
         BaseMod.addCard(new Manifestation());
         BaseMod.addCard(new InitialWish());
@@ -159,12 +150,18 @@ public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, Ed
         BaseMod.addCard(new AkashaPulses());
         BaseMod.addCard(new EscalatingRage());
 //        BaseMod.addCard(new WisdomSharpen());
-        BaseMod.addCard(new A());
         BaseMod.addCard(new Q());
         BaseMod.addCard(new JoltsInForest());
         BaseMod.addCard(new WallOfSamiel());
         BaseMod.addCard(new DefectByThorn());
         BaseMod.addCard(new CriticalHit());
+        BaseMod.addCard(new GildedDash());
+        BaseMod.addCard(new PureThought());
+        BaseMod.addCard(new Syllogism());
+        BaseMod.addCard(new Rigorous());
+        BaseMod.addCard(new Probe());
+        BaseMod.addCard(new Exhortation());
+        BaseMod.addCard(new Reflection());
 
 
 //        new AutoAdd("NahidaMod").packageFilter(SurasthanaFantasia.class).setDefaultSeen(true).cards();

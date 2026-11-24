@@ -30,8 +30,15 @@
   "NahidaMod:NahidaMarkPower": {
     "NAME": "蕴种印",
     "DESCRIPTIONS": [
-      "当你打出 #y所闻遍计 时，这名敌人失去 #b",
-      " 点生命。"
+      "当前剩余 #b",
+      " 回合。每回合结束时减少 #b1 层，持有时可被 #y所闻遍计 等卡牌触发额外失去生命。"
+    ]
+  },
+  "NahidaMod:NextTurnCopyCardPower": {
+    "NAME": "细语回萦",
+    "DESCRIPTIONS": [
+      "下回合开始时，将 #b",
+      " 张被记录的卡牌复制品加入你的手牌。"
     ]
   },
   "NahidaMod:ReducePower": {
@@ -179,6 +186,13 @@
     "DESCRIPTIONS": [
       "回合结束时，引爆 #b",
       " 枚 #y丰穰之核 ，每枚对所有敌人造成 #b18 点伤害。"
+    ]
+  },
+  "NahidaMod:RigorousPower": {
+    "NAME": "严密",
+    "DESCRIPTIONS": [
+      "若本回合未受到未被格挡的伤害，下回合开始时获得 #b",
+      " 点 #y格挡 。"
     ]
   }
 }

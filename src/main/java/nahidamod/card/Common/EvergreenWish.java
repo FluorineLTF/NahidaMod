@@ -1,50 +1,54 @@
 package nahidamod.card.Common;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import nahidamod.actions.RechargeAction;
+import nahidamod.helpers.ForgetHelper;
 import nahidamod.helpers.ModHelper;
+import nahidamod.helpers.NextBattleManager;
 import nahidamod.modcore.NahidaCard;
 
 import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 
 public class EvergreenWish extends NahidaCard {
-    public static final String ID = ModHelper.makePath(EvergreenWish.class.getSimpleName());
+    public static final String ID = ModHelper.makePath("EvergreenWish");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = "NahidaResources/images/cards/TestPicture.png";
+    private static final String IMG_PATH = "NahidaResources/images/cards/EvergreenWish.png";
     private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardColor COLOR = EXAMPLE_CARD;
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int inactives = 0;
 
     public EvergreenWish() {
-        // 为了命名规范修改了变量名。这些参数具体的作用见下方
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, inactives);
-        this.block = this.baseBlock = 7;
-        this.magicNumber = this.baseMagicNumber = 1;
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, EXAMPLE_CARD, CardRarity.COMMON, CardTarget.SELF, 0);
+        this.exhaust = true;
+        this.hasUPGRADE_DESCRIPTION = true;
+        this.cardsToPreview = new Miracle();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(2);
-            this.upgradeMagicNumber(1);
+            AbstractCard preview = new Miracle();
+            preview.upgrade();
+            this.cardsToPreview = preview;
+            this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new RetainCardsAction(p,this.magicNumber));
-        this.addToTop(new RechargeAction(this));
+        AbstractCard miracle = new Miracle();
+        if (this.upgraded) {
+            miracle.upgrade();
+        }
+        this.addToBot(new MakeTempCardInDrawPileAction(miracle, 1, false, true));
+        NextBattleManager.INSTANCE.addNextBattleEnergy(1);
+        ForgetHelper.markCardForForget(this);
     }
 }

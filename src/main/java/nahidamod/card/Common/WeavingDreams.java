@@ -1,6 +1,5 @@
 package nahidamod.card.Common;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,22 +13,16 @@ import nahidamod.modcore.NahidaCard;
 import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 
 public class WeavingDreams extends NahidaCard {
-    public static final String ID = ModHelper.makePath(WeavingDreams.class.getSimpleName());
+    public static final String ID = ModHelper.makePath("WeavingDreams");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = "NahidaResources/images/cards/TestPicture.png";
+    private static final String IMG_PATH = "NahidaResources/images/cards/WeavingDreams.png";
     private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardColor COLOR = EXAMPLE_CARD;
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-    private static final int inactives = 0;
 
     public WeavingDreams() {
-        // 为了命名规范修改了变量名。这些参数具体的作用见下方
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, inactives);
-        this.magicNumber = this.baseMagicNumber = 2 ;
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, EXAMPLE_CARD, CardRarity.COMMON, CardTarget.ALL_ENEMY, 0);
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
 
@@ -43,9 +36,10 @@ public class WeavingDreams extends NahidaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            if (!mo.isDeadOrEscaped()) {
+                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber));
+            }
         }
     }
 }
