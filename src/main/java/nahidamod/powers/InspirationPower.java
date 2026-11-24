@@ -40,6 +40,7 @@ public class InspirationPower extends AbstractPower {
     public void onInitialApplication() {
         if (this.amount > 0) {
             totalGainedThisCombat += this.amount;
+            notifyPaintedDome(this.amount);
         }
         checkBurst();
     }
@@ -49,9 +50,20 @@ public class InspirationPower extends AbstractPower {
         this.fontScale = 8.0F;
         if (stackAmount > 0) {
             totalGainedThisCombat += stackAmount;
+            notifyPaintedDome(stackAmount);
         }
         this.amount += stackAmount;
         checkBurst();
+    }
+
+    private void notifyPaintedDome(int gainedAmount) {
+        if (this.owner == null) {
+            return;
+        }
+        AbstractPower paintedDome = this.owner.getPower(PaintedDomePower.POWER_ID);
+        if (paintedDome instanceof PaintedDomePower) {
+            ((PaintedDomePower) paintedDome).onGainInspiration(gainedAmount);
+        }
     }
 
     private void checkBurst() {

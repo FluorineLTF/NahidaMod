@@ -1,13 +1,13 @@
 package nahidamod.card.Uncommon;
 
-import com.megacrit.cardcrawl.cards.blue.EchoForm;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import nahidamod.actions.SeeThroughAction;
 import nahidamod.helpers.ModHelper;
 import nahidamod.modcore.NahidaCard;
+import nahidamod.powers.InspirationPower;
 
 import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 
@@ -15,31 +15,27 @@ public class SeeThrough extends NahidaCard {
     public static final String ID = ModHelper.makePath("SeeThrough");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = "NahidaResources/images/cards/TestPicture.png";
-    private static final int COST = 1;
+    private static final String IMG_PATH = "NahidaResources/images/cards/SeeThrough.png";
+    private static final int COST = 0;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardColor COLOR = EXAMPLE_CARD;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+
     public SeeThrough() {
-        // 为了命名规范修改了变量名。这些参数具体的作用见下方
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, 0);
-        this.hasUPGRADE_DESCRIPTION = true;
-        this.baseMagicNumber = 1;
-        this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber;
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, EXAMPLE_CARD, CardRarity.UNCOMMON, CardTarget.ENEMY, 0);
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new SeeThroughAction(this.magicNumber, m));
-    }
-
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.exhaust = false;
-            this.updateDescription();
+            this.upgradeMagicNumber(1);
+        }
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (m != null && !m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0) {
+            this.addToBot(new ApplyPowerAction(p, p, new InspirationPower(p, this.magicNumber), this.magicNumber));
         }
     }
 }

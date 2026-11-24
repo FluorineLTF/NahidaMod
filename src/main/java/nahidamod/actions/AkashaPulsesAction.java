@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
-import nahidamod.card.Special.EscalatingRage;
-import nahidamod.card.Special.WisdomSharpen;
 import nahidamod.modcore.NahidaCard;
 
 import javax.smartcardio.Card;

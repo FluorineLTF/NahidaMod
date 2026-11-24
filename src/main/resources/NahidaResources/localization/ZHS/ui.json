@@ -86,5 +86,22 @@
     "TEXT": [
       "选择弃牌堆中的牌进行激化。"
     ]
+  },
+  "NahidaMod:QuickenDrawUI": {
+    "TEXT": [
+      "选择 ",
+      " 张抽牌堆中的牌进行激化。",
+      "激化抽牌堆中的牌"
+    ]
+  },
+  "NahidaMod:DiscardAnyUI": {
+    "TEXT": [
+      "弃置任意张手牌"
+    ]
+  },
+  "NahidaMod:NoDendroCoreUI": {
+    "TEXT": [
+      "场上没有草原核！"
+    ]
   }
 }

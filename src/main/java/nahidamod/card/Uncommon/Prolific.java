@@ -7,25 +7,20 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nahidamod.helpers.ModHelper;
 import nahidamod.modcore.NahidaCard;
-import nahidamod.powers.DefectByThornPower;
+import nahidamod.powers.ProlificPower;
 
 import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 
-public class DefectByThorn extends NahidaCard {
-    public static final String ID = ModHelper.makePath(DefectByThorn.class.getSimpleName());
+public class Prolific extends NahidaCard {
+    public static final String ID = ModHelper.makePath("Prolific");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = "NahidaResources/images/cards/TestPicture.png";
+    private static final String IMG_PATH = "NahidaResources/images/cards/Prolific.png";
     private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final CardType TYPE = CardType.POWER;
-    private static final CardColor COLOR = EXAMPLE_CARD;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
 
-    public DefectByThorn() {
-        // 为了命名规范修改了变量名。这些参数具体的作用见下方
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, 0);
+    public Prolific() {
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, EXAMPLE_CARD, CardRarity.UNCOMMON, CardTarget.SELF, 0);
         this.magicNumber = this.baseMagicNumber = 1;
         this.hasUPGRADE_DESCRIPTION = true;
     }
@@ -33,16 +28,15 @@ public class DefectByThorn extends NahidaCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName(); // 卡牌名字变为绿色并添加“+”，且标为升级过的卡牌，之后不能再升级。
+            this.upgradeName();
             this.isInnate = true;
-            this.updateDescription();
+            this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
-
-
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new DefectByThornPower(p,this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new ProlificPower(p, this.magicNumber), this.magicNumber));
     }
 }

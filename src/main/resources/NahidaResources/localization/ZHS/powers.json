@@ -65,11 +65,10 @@
     ]
   },
   "NahidaMod:SomeoneCallMyNamePower": {
-    "NAME": "最初的贤者",
+    "NAME": "何人唤我名",
     "DESCRIPTIONS": [
-      "#g你是我布耶尔最初的贤者。 NL 每回合开始时，向你的手牌中加入 #b",
-      " 张 #g净善的遐歌 。",
-      " 张 #g净善的遐歌+ 。"
+      "每回合开始时，向手牌中加入 #b1 张 #y净善的遐歌 （初始 #b",
+      " 层 #y失活 ， #y消耗 ）。"
     ]
   },
   "NahidaMod:LeavesAndPetalsPower": {
@@ -88,7 +87,7 @@
   "NahidaMod:OrmosPower": {
     "NAME": "喧繁之港",
     "DESCRIPTIONS": [
-      "你每激化一张牌，抽 #b",
+      "每当你获得 #y智慧 时，抽 #b",
       " 张牌。"
     ]
   },
@@ -145,10 +144,10 @@
     ]
   },
   "NahidaMod:QPower": {
-    "NAME": "摩耶之殿",
+    "NAME": "心景幻成",
     "DESCRIPTIONS": [
-      "#g来我家做客吧~。 NL 每回合开始时，激化你至多 #b",
-      " 张手牌。"
+      "每当你获得 #y智慧 时， #y激化 你的所有手牌（每次触发 #b",
+      " 轮）。"
     ]
   },
   "NahidaMod:WallPower": {
@@ -193,6 +192,33 @@
     "DESCRIPTIONS": [
       "若本回合未受到未被格挡的伤害，下回合开始时获得 #b",
       " 点 #y格挡 。"
+    ]
+  },
+  "NahidaMod:PaintedDomePower": {
+    "NAME": "繁绘隅穹",
+    "DESCRIPTIONS": [
+      "你每获得 #b1 点 #y灵感 时，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "NahidaMod:CandleOfLifePower": {
+    "NAME": "生之烛",
+    "DESCRIPTIONS": [
+      "每次失去生命时，失去的生命值减少等同于你 #y智慧 的层数，并向抽牌堆中加入 #b",
+      " 张 #y殄熄 。"
+    ]
+  },
+  "NahidaMod:ProlificPower": {
+    "NAME": "多产",
+    "DESCRIPTIONS": [
+      "每当你生成 #y草原核 时，额外生成 #b",
+      " 个 #y草原核 。"
+    ]
+  },
+  "NahidaMod:CollectiveWisdomPower": {
+    "NAME": "集思广益",
+    "DESCRIPTIONS": [
+      "当你的能量不足以打出固定费用卡牌时，消耗与所缺能量等量的 #y智慧 将其打出。"
     ]
   }
 }
