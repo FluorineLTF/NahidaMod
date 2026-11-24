@@ -103,5 +103,21 @@
     "TEXT": [
       "场上没有草原核！"
     ]
+  },
+  "NahidaMod:PlanAheadUI": {
+    "TEXT": [
+      "选择一张牌使其在下一场战斗获得固有"
+    ]
+  },
+  "NahidaMod:SurpriseUI": {
+    "TEXT": [
+      "选择 ",
+      " 张抽牌堆中的牌加入手牌（本回合耗能为0）。"
+    ]
+  },
+  "NahidaMod:RemoveDeckCardUI": {
+    "TEXT": [
+      "选择一张牌从你的卡组中永久移除。"
+    ]
   }
 }

@@ -2,7 +2,8 @@
   "NahidaMod:WiseLordFormPower": {
     "NAME": "智慧主形态",
     "DESCRIPTIONS": [
-      " #g草木的智慧。 NL 你的回合开始时，你可以替换 #y任意张 手牌。"
+      "每回合开始时，获得 #b",
+      " 点 #y智慧 。"
     ]
   },
   "NahidaMod:WisdomPower": {
@@ -80,8 +81,8 @@
   "NahidaMod:AgnihotraSutraPower": {
     "NAME": "正法炬书",
     "DESCRIPTIONS": [
-      "每回合开始时，获得 #b",
-      " 点 #r遗忘 。"
+      "回合开始时，若你的 #y智慧 不为 #b0 ，失去 #b1 点 #y智慧 并获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "NahidaMod:OrmosPower": {
@@ -92,17 +93,30 @@
     ]
   },
   "NahidaMod:VarunaGathaPower": {
-    "NAME": "水天供书",
+    "NAME": "吉祥具书",
     "DESCRIPTIONS": [
-      "你每将抽牌堆洗牌一次，就获得 #b",
-      " 点 [E] 。"
+      "每当你触发 #y灵感爆发 时，在本场战斗中升级你的一张手牌。",
+      "每当你触发 #y灵感爆发 时，在本场战斗中升级你的所有手牌。"
+    ]
+  },
+  "NahidaMod:AbundancePower": {
+    "NAME": "丰饶",
+    "DESCRIPTIONS": [
+      "每回合开始时，产生 #b",
+      " 枚 #y草原核 ；你产生的所有 #y草原核 变为 #y丰穰之核 。"
     ]
   },
   "NahidaMod:VimanaAgamPower": {
-    "NAME": "吉祥具书",
+    "NAME": "水天供书",
     "DESCRIPTIONS": [
-      "你每将抽牌堆洗牌一次，就随机在 #y本场战斗中升级 你牌组中的 #b",
-      " 张牌。"
+      "每当你触发 #y灵感爆发 时，产生 #b",
+      " 枚 #y草原核 。"
+    ]
+  },
+  "NahidaMod:EnlightenmentPower": {
+    "NAME": "醍醐灌顶",
+    "DESCRIPTIONS": [
+      "本场战斗中你的能力牌耗能降为 #b0 。"
     ]
   },
   "NahidaMod:ReturnCardToHandPower": {
@@ -204,8 +218,7 @@
   "NahidaMod:CandleOfLifePower": {
     "NAME": "生之烛",
     "DESCRIPTIONS": [
-      "每次失去生命时，失去的生命值减少等同于你 #y智慧 的层数，并向抽牌堆中加入 #b",
-      " 张 #y殄熄 。"
+      "你每次失去生命时，失去的生命值减少等同于你 #y智慧 的层数。"
     ]
   },
   "NahidaMod:ProlificPower": {
@@ -219,6 +232,12 @@
     "NAME": "集思广益",
     "DESCRIPTIONS": [
       "当你的能量不足以打出固定费用卡牌时，消耗与所缺能量等量的 #y智慧 将其打出。"
+    ]
+  },
+  "NahidaMod:LongAlliancePower": {
+    "NAME": "漫长的盟约",
+    "DESCRIPTIONS": [
+      "你的能量与手牌可以保留到下一回合。"
     ]
   }
 }

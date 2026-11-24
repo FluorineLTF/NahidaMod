@@ -2,80 +2,74 @@ package nahidamod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.screens.CardRewardScreen;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
+import com.megacrit.cardcrawl.localization.UIStrings;
+import nahidamod.helpers.ModHelper;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class SurpriseAction extends AbstractGameAction {
-    private boolean retrieveCard = false;
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ModHelper.makePath("SurpriseUI"));
+    private static final String[] TEXT = uiStrings != null ? uiStrings.TEXT : new String[]{"选择 ", " 张抽牌堆中的牌加入手牌（本回合耗能为0）。"};
 
-    public SurpriseAction() {
+    private final AbstractPlayer p;
+
+    public SurpriseAction(int amount) {
+        this.p = AbstractDungeon.player;
+        this.amount = amount;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
-        this.amount = 1;
     }
 
     @Override
     public void update() {
-        ArrayList generatedCards;
-        generatedCards = generateCardChoices();
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, CardRewardScreen.TEXT[1], true);
-            this.tickDuration();
-        } else {
-            if (!this.retrieveCard) {
-                if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
-                    AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();
-                    if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
-                        disCard.upgrade();
-                    }
-
-                    disCard.setCostForTurn(0);
-                    disCard.current_x = -1000.0F * Settings.xScale;
-                    if (AbstractDungeon.player.hand.size() < 10) {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-                    } else {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-                    }
-                    AbstractDungeon.cardRewardScreen.discoveryCard = null;
-                }
-
-                this.retrieveCard = true;
+            if (this.p == null || this.p.drawPile.isEmpty() || this.amount <= 0) {
+                this.isDone = true;
+                return;
             }
-
+            if (this.p.drawPile.size() <= this.amount) {
+                ArrayList<AbstractCard> snapshot = new ArrayList<>(this.p.drawPile.group);
+                for (AbstractCard c : snapshot) {
+                    moveToHandFree(c);
+                }
+                this.p.hand.refreshHandLayout();
+                this.isDone = true;
+                return;
+            }
+            CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            for (AbstractCard c : this.p.drawPile.group) {
+                tmp.addToRandomSpot(c);
+            }
+            AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0] + this.amount + TEXT[1], false);
             this.tickDuration();
+            return;
         }
+
+        if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                c.unhover();
+                moveToHandFree(c);
+            }
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            this.p.hand.refreshHandLayout();
+            this.p.hand.glowCheck();
+            this.isDone = true;
+        }
+        this.tickDuration();
     }
 
-    private ArrayList<AbstractCard> generateCardChoices() {
-        ArrayList<AbstractCard> derp = new ArrayList<>();
-
-        while(derp.size() != 3) {
-            boolean dupe = false;
-            AbstractCard tmp;
-
-            tmp = AbstractDungeon.returnTrulyRandomCardInCombat();
-
-            Iterator var5 = derp.iterator();
-
-            while(var5.hasNext()) {
-                AbstractCard c = (AbstractCard)var5.next();
-                if (c.cardID.equals(tmp.cardID)) {
-                    dupe = true;
-                    break;
-                }
-            }
-
-            if (!dupe) {
-                derp.add(tmp.makeCopy());
-            }
+    private void moveToHandFree(AbstractCard c) {
+        if (this.p.hand.size() >= basemod.BaseMod.MAX_HAND_SIZE) {
+            this.p.drawPile.moveToDiscardPile(c);
+            this.p.createHandIsFullDialog();
+        } else {
+            c.setCostForTurn(0);
+            this.p.drawPile.moveToHand(c, this.p.drawPile);
         }
-
-        return derp;
     }
 }
