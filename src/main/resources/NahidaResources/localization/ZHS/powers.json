@@ -239,5 +239,12 @@
     "DESCRIPTIONS": [
       "你的能量与手牌可以保留到下一回合。"
     ]
+  },
+  "NahidaMod:SelfExploitationPower": {
+    "NAME": "自我透支",
+    "DESCRIPTIONS": [
+      "本回合造成的伤害翻 #b",
+      " 倍；下回合开始时获得 #b99 层 #y易伤 、 #y虚弱 与 #y脆弱 。"
+    ]
   }
 }

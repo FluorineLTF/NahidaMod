@@ -1,17 +1,16 @@
 package nahidamod.card.Common;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import nahidamod.helpers.ModHelper;
 import nahidamod.modcore.NahidaCard;
-import nahidamod.powers.WisdomPower;
+import nahidamod.powers.InspirationPower;
 
 import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 
@@ -29,32 +28,6 @@ public class Syllogism extends NahidaCard {
         this.magicNumber = this.baseMagicNumber = 3;
     }
 
-    private int getWisdomBonus() {
-        if (AbstractDungeon.player == null) {
-            return 0;
-        }
-        AbstractPower p = AbstractDungeon.player.getPower(WisdomPower.POWER_ID);
-        return p != null ? Math.max(0, p.amount) : 0;
-    }
-
-    @Override
-    public void applyPowers() {
-        int realBase = this.baseDamage;
-        this.baseDamage += getWisdomBonus();
-        super.applyPowers();
-        this.baseDamage = realBase;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBase = this.baseDamage;
-        this.baseDamage += getWisdomBonus();
-        super.calculateCardDamage(mo);
-        this.baseDamage = realBase;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
-
     @Override
     public void upgrade() {
         if (!this.upgraded) {
@@ -68,5 +41,6 @@ public class Syllogism extends NahidaCard {
         for (int i = 0; i < this.magicNumber; i++) {
             this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
+        this.addToBot(new ApplyPowerAction(p, p, new InspirationPower(p, 3), 3));
     }
 }

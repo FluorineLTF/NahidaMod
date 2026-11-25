@@ -1,9 +1,8 @@
 package nahidamod.card.Uncommon;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,33 +22,29 @@ public class GuiltByAssociation extends NahidaCard {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
 
     public GuiltByAssociation() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, EXAMPLE_CARD, CardRarity.UNCOMMON, CardTarget.ENEMY, 0);
-        this.damage = this.baseDamage = 16;
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, EXAMPLE_CARD, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, 3);
+        this.damage = this.baseDamage = 7;
     }
 
     @Override
-    public void triggerOnCardPlayed(AbstractCard cardPlayed) {
-        if (cardPlayed != null && cardPlayed.type == CardType.SKILL) {
-            this.setCostForTurn(this.costForTurn - 1);
-        }
+    public void triggerWhenDrawn() {
+        super.triggerWhenDrawn();
+        this.addToBot(new DrawCardAction(AbstractDungeon.player, 1));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(5);
+            this.upgradeDamage(3);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        this.resetAttributes();
-    }
-
-    @Override
-    public void atTurnStart() {
-        this.resetAttributes();
+        int count = p.hand.size();
+        for (int i = 0; i < count; i++) {
+            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        }
     }
 }

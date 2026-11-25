@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import nahidamod.helpers.ModHelper;
 import nahidamod.modcore.NahidaCard;
-import nahidamod.powers.InspirationPower;
+import nahidamod.powers.WisdomPower;
 
 import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 
@@ -22,6 +22,7 @@ public class SeeThrough extends NahidaCard {
     public SeeThrough() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, EXAMPLE_CARD, CardRarity.UNCOMMON, CardTarget.ENEMY, 0);
         this.magicNumber = this.baseMagicNumber = 2;
+        this.exhaust = true;
     }
 
     @Override
@@ -35,7 +36,7 @@ public class SeeThrough extends NahidaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null && !m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0) {
-            this.addToBot(new ApplyPowerAction(p, p, new InspirationPower(p, this.magicNumber), this.magicNumber));
+            this.addToBot(new ApplyPowerAction(p, p, new WisdomPower(p, this.magicNumber), this.magicNumber));
         }
     }
 }

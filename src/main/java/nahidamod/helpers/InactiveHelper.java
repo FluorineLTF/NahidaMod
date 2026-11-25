@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import nahidamod.interfaces.OnAnyCardQuickenedListener;
 import nahidamod.interfaces.OnQuickenCard;
 import nahidamod.patches.InactiveField;
+import nahidamod.patches.QuickenAttackBonusPatch;
 
 import java.util.ArrayList;
 
@@ -64,6 +65,12 @@ public class InactiveHelper {
         }
         if (card instanceof OnQuickenCard) {
             ((OnQuickenCard) card).onQuicken();
+            triggered = true;
+        }
+        if (card.type == AbstractCard.CardType.ATTACK) {
+            QuickenAttackBonusPatch.addBonus(card, 1);
+            card.applyPowers();
+            card.superFlash();
             triggered = true;
         }
 

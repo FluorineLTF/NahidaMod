@@ -34,7 +34,7 @@
   },
   "NahidaMod:SeeThrough": {
     "NAME": "看破",
-    "DESCRIPTION": "如果一名敌人的意图是攻击，获得 !M! 点 nahidamod:灵感 。"
+    "DESCRIPTION": "如果一名敌人的意图是攻击，获得 !M! 点 nahidamod:智慧 。 NL 消耗 。"
   },
   "NahidaMod:PerusingScripture": {
     "NAME": "遐叶论经",
@@ -82,7 +82,7 @@
   },
   "NahidaMod:ForbiddenKnowledge": {
     "NAME": "禁忌知识",
-    "DESCRIPTION": "获得 [E] [E] 。 NL 为你手牌中随机一张牌添加 1 层 nahidamod:失活 。 NL 向弃牌堆中添加一张此牌的复制。"
+    "DESCRIPTION": "消耗 1 点 nahidamod:智慧 才能打出。 NL 在本回合获得 3 点 力量 与 敏捷 ，为你弃牌堆中随机一张牌添加 1 层 nahidamod:失活 。"
   },
   "NahidaMod:JustPunishment": {
     "NAME": "奉辞伐罪",
@@ -111,16 +111,11 @@
   },
   "NahidaMod:ManifestationBond": {
     "NAME": "显象缚结",
-    "DESCRIPTION": "消耗你的全部 nahidamod:智慧 ，对所有敌人造成 !D! 点伤害x次（x为你的 nahidamod:智慧 层数）。获得3-x点 nahidamod:智慧 （至少为0）。"
+    "DESCRIPTION": "消耗你的全部 nahidamod:灵感 ，对所有敌人造成 !D! 点伤害x次。获得 6-x 点 nahidamod:灵感 （x为你的 nahidamod:灵感 层数且至少为1）。"
   },
   "NahidaMod:RitualDuel": {
     "NAME": "秘仪决斗",
     "DESCRIPTION": "获得 !M! 点 力量 ，所有敌人获得 1 点 力量 ， nahidamod:激化 你的所有手牌。"
-  },
-  "NahidaMod:EvergreenWish": {
-    "NAME": "常绿的希冀",
-    "DESCRIPTION": "将一张 *奇迹 放置在你的抽牌堆顶部。 NL 你在下场战斗开始时获得 [E] 。 NL nahidamod:遗忘 。",
-    "UPGRADE_DESCRIPTION": "将一张 *奇迹+ 放置在你的抽牌堆顶部。 NL 你在下场战斗开始时获得 [E] 。 NL nahidamod:遗忘 。"
   },
   "NahidaMod:Fragrance": {
     "NAME": "灵酚香",
@@ -193,7 +188,7 @@
   },
   "NahidaMod:TouringLight": {
     "NAME": "游光示现",
-    "DESCRIPTION": " 不能被打出 。 NL 当你抽到这张牌时，将至多 !M! 张手牌返回你的抽牌堆。"
+    "DESCRIPTION": "抽 3 张牌。 NL nahidamod:失活 3。 NL 当你抽到这张牌时，你获得 !M! 层 nahidamod:灵感 。"
   },
   "NahidaMod:EndlessCycle": {
     "NAME": "往复不息",
@@ -334,8 +329,8 @@
   },
   "NahidaMod:SelfExploitation": {
     "NAME": "自我透支",
-    "DESCRIPTION": "本回合你通过卡牌获得的 格挡 翻倍，但下回合无法从卡牌中获取 格挡 。",
-    "UPGRADE_DESCRIPTION": "本回合你通过卡牌获得的 格挡 翻3倍，但下回合无法从卡牌中获取 格挡 。"
+    "DESCRIPTION": "本回合你造成的伤害翻倍，但在下回合开始时获得 99 层 易伤 、 虚弱 和 脆弱 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "本回合你造成的伤害翻3倍，但在下回合开始时获得 99 层 易伤 、 虚弱 和 脆弱 。 NL 消耗 。"
   },
   "NahidaMod:SlumberingWoods": {
     "NAME": "酣睡的郁林",
@@ -355,7 +350,7 @@
   },
   "NahidaMod:GuiltByAssociation": {
     "NAME": "蔓引株连",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合内你每打出一张技能牌，这张卡牌的费用-1。"
+    "DESCRIPTION": "你手中每有一张牌，对随机一名敌人造成 !D! 点伤害。 NL nahidamod:失活 3。 NL 当你抽到这张牌时，抽 1 张牌。"
   },
   "NahidaMod:EndlessBubbles": {
     "NAME": "无限泡影",
@@ -425,7 +420,7 @@
   },
   "NahidaMod:Syllogism": {
     "NAME": "三段论",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 这张卡牌的伤害受到 nahidamod:智慧 的加成。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 获得 3 点 nahidamod:灵感 。"
   },
   "NahidaMod:Rigorous": {
     "NAME": "严密",
@@ -433,11 +428,11 @@
   },
   "NahidaMod:Probe": {
     "NAME": "试探",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若其造成了未被格挡的伤害，则抽 1 张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若其造成了未被格挡的伤害，则获得 1 点 nahidamod:灵感 并抽 1 张牌。"
   },
   "NahidaMod:Exhortation": {
     "NAME": "叮咛",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌放进你的抽牌堆中。 NL 这张牌在使用 !M! 次后被 消耗 。"
+    "DESCRIPTION": "获得 !M! 点 力量 与 敏捷 。 NL nahidamod:失活 3。 NL 当你抽到这张牌时，获得 !B! 点 格挡 。"
   },
   "NahidaMod:Reflection": {
     "NAME": "反思",
@@ -495,7 +490,7 @@
   },
   "NahidaMod:InitialWisdomWish": {
     "NAME": "几初的智愿",
-    "DESCRIPTION": "消耗 1 点 nahidamod:智慧 ，你在下场战斗开始时获得 1 点 nahidamod:智慧 。 NL nahidamod:遗忘 。"
+    "DESCRIPTION": "消耗 1 点 nahidamod:智慧 ，你在下场战斗开始时获得 !M! 层 nahidamod:智慧 。 NL nahidamod:遗忘 。"
   },
   "NahidaMod:CollectiveWisdom": {
     "NAME": "集思广益",

@@ -99,7 +99,7 @@ public class NahidaMod implements EditCardsSubscriber, EditStringsSubscriber, Ed
         BaseMod.addCard(new MelodyOfRebirth());
         BaseMod.addCard(new RitualDuel());
         BaseMod.addCard(new Reverie());
-        BaseMod.addCard(new EvergreenWish());
+        BaseMod.addCard(new TouringLight());
         BaseMod.addCard(new SomeoneCallMyName());
         BaseMod.addCard(new AgnihotraSutra());
         BaseMod.addCard(new TheNobleWitness());

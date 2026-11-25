@@ -1,6 +1,7 @@
 package nahidamod.card.Common;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import nahidamod.helpers.ModHelper;
 import nahidamod.modcore.NahidaCard;
+import nahidamod.powers.InspirationPower;
 
 import static nahidamod.Characters.MyCharacter.Enums.EXAMPLE_CARD;
 
@@ -46,6 +48,7 @@ public class Probe extends NahidaCard {
                     m.damage(info);
                     if (m.lastDamageTaken > 0) {
                         this.addToTop(new DrawCardAction(p, 1));
+                        this.addToTop(new ApplyPowerAction(p, p, new InspirationPower(p, 1), 1));
                     }
                 }
                 this.isDone = true;

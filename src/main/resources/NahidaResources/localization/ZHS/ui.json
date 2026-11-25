@@ -119,5 +119,15 @@
     "TEXT": [
       "选择一张牌从你的卡组中永久移除。"
     ]
+  },
+  "NahidaMod:QuickenNoTargetUI": {
+    "TEXT": [
+      "我不需要激化卡牌"
+    ]
+  },
+  "NahidaMod:NoWisdomUI": {
+    "TEXT": [
+      "我没有足够的智慧！"
+    ]
   }
 }

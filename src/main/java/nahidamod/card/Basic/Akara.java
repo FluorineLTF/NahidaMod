@@ -23,7 +23,7 @@ public class Akara extends NahidaCard {
 
     public Akara() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, EXAMPLE_CARD, CardRarity.BASIC, CardTarget.ENEMY, 0);
-        this.damage = this.baseDamage = 7;
+        this.damage = this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
@@ -31,9 +31,7 @@ public class Akara extends NahidaCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
-            this.upgradeDamage(1);
-            this.upgradeMagicNumber(1);
+            this.upgradeDamage(4);
         }
     }
 

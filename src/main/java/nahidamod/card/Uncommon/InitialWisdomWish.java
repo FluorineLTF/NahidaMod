@@ -24,6 +24,7 @@ public class InitialWisdomWish extends NahidaCard {
 
     public InitialWisdomWish() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, EXAMPLE_CARD, CardRarity.UNCOMMON, CardTarget.SELF, 0);
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
 
@@ -31,12 +32,13 @@ public class InitialWisdomWish extends NahidaCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
+            this.upgradeMagicNumber(1);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        final int nextWisdom = this.magicNumber;
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
@@ -47,7 +49,7 @@ public class InitialWisdomWish extends NahidaCard {
                     if (wp.amount <= 0) {
                         p.powers.remove(wp);
                     }
-                    NextBattleManager.INSTANCE.addNextBattleWisdom(1);
+                    NextBattleManager.INSTANCE.addNextBattleWisdom(nextWisdom);
                 }
                 ForgetHelper.markCardForForget(InitialWisdomWish.this);
                 this.isDone = true;
