@@ -14,7 +14,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * 因此不会影响卡牌的原始数值或永久升级数据。
  */
 public class QuickenAttackBonusPatch {
-    public static SpireField<Integer> quickenDamageBonus = new SpireField<>(() -> 0);
+    @SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
+    public static class QuickenBonusField {
+        public static SpireField<Integer> quickenDamageBonus = new SpireField<>(() -> 0);
+    }
 
     private static final ThreadLocal<Integer> ORIGINAL_BASE_DAMAGE = new ThreadLocal<>();
 
@@ -22,20 +25,22 @@ public class QuickenAttackBonusPatch {
         if (card == null || amount == 0) {
             return;
         }
-        quickenDamageBonus.set(card, Math.max(0, getBonus(card) + amount));
+        Integer current = QuickenBonusField.quickenDamageBonus.get(card);
+        int base = current == null ? 0 : Math.max(0, current);
+        QuickenBonusField.quickenDamageBonus.set(card, Math.max(0, base + amount));
     }
 
     public static int getBonus(AbstractCard card) {
         if (card == null) {
             return 0;
         }
-        Integer bonus = quickenDamageBonus.get(card);
+        Integer bonus = QuickenBonusField.quickenDamageBonus.get(card);
         return bonus == null ? 0 : Math.max(0, bonus);
     }
 
     public static void resetBonus(AbstractCard card) {
         if (card != null) {
-            quickenDamageBonus.set(card, 0);
+            QuickenBonusField.quickenDamageBonus.set(card, 0);
         }
     }
 
